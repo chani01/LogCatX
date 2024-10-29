@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.maven.publish)
 }
 
 android {
@@ -34,6 +35,20 @@ android {
         buildConfig = true
     }
 }
+
+group = "com.github.chani01"
+version = "1.0.0"
+
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("release") {
+                from(components["release"])
+            }
+        }
+    }
+}
+
 
 dependencies {
 

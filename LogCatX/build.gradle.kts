@@ -34,6 +34,9 @@ afterEvaluate {
         publications {
             create<MavenPublication>("release") {
                 from(components["release"])
+                groupId = "com.github.chani01"
+                artifactId = "LogCatX"
+                version = "1.0.0"
             }
         }
         repositories {

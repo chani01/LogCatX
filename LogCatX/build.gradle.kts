@@ -24,6 +24,9 @@ android {
             )
         }
     }
+    buildFeatures {
+        buildConfig = false
+    }
 }
 
 group = "com.github.chani01"

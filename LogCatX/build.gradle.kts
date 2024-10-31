@@ -40,7 +40,7 @@ android {
 }
 
 group = "com.github.chani01"
-version = "1.0.3"
+version = libs.versions.loccatx.get()
 
 afterEvaluate {
     publishing {
@@ -49,7 +49,7 @@ afterEvaluate {
                 from(components["release"])
                 groupId = "com.github.chani01"
                 artifactId = "LogCatX"
-                version = "1.0.2"
+                version = libs.versions.loccatx.get()
             }
         }
         repositories {

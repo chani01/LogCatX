@@ -30,7 +30,7 @@ android {
 }
 
 group = "com.github.chani01"
-version = "1.0.1"
+version = "0.0.1"
 
 afterEvaluate {
     publishing {
@@ -39,7 +39,7 @@ afterEvaluate {
                 from(components["release"])
                 groupId = "com.github.chani01"
                 artifactId = "LogCatX"
-                version = "1.0.0"
+                version = "0.0.1"
             }
         }
         repositories {

@@ -15,6 +15,15 @@ android {
         consumerProguardFiles("consumer-rules.pro")
     }
 
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_17.toString()
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -26,17 +35,17 @@ android {
     }
 
     buildFeatures {
-        buildConfig = false
+        buildConfig = true
     }
 }
 
 group = "com.github.chani01"
-version = "1.0.2"
+version = "1.0.3"
 
 afterEvaluate {
     publishing {
         publications {
-            create<MavenPublication>("release") {
+            create<MavenPublication>("mavenRelease") {
                 from(components["release"])
                 groupId = "com.github.chani01"
                 artifactId = "LogCatX"

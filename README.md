@@ -6,12 +6,10 @@ An easy-to-use and powerful logging library for Android applications. Simplify y
 
 ## 🌟 Features
 - **Simple API**: Minimal setup with intuitive method calls.
-- **Log Levels**: Supports various log levels (e.g., DEBUG, INFO, WARN, ERROR).
-- **Customizable Tags**: Define your own tags for better log organization.
-- **Log Filtering**: Easily filter logs by level or tag.
-- **Release Mode Safety**: Automatically disables logs in production builds to keep your app lightweight and secure.
-- **File Logging**: Save logs to a file for persistent debugging.
-- **Thread and Method Info**: Automatically includes thread name and calling method for detailed context.
+- **Customizable Tags**: Easily set default tags for better log organization.
+- **Log Levels**: Supports various log levels (DEBUG, INFO, WARN, ERROR).
+- **File Logging**: Optionally persist logs to a file for debugging.
+- **Flexible Logging Control**: Enable or disable logging dynamically using `isLoggingEnabled`.
 
 ---
 
@@ -20,7 +18,7 @@ An easy-to-use and powerful logging library for Android applications. Simplify y
 1. **Add the dependency** to your `build.gradle` file:
    ```gradle
    dependencies {
-       implementation 'com.chani01:LogCatX:1.0.0'
+       implementation 'com.chani01:LogCatX:1.0.4'
    }
    ```
 
@@ -28,14 +26,9 @@ An easy-to-use and powerful logging library for Android applications. Simplify y
 
 ## 📖 Usage
 
-### Basic Logging
-```kotlin
-Dlog.d("This is a debug message")
-Dlog.i("This is an info message")
-Dlog.w("This is a warning")
-Dlog.e("This is an error message")
-```
 ### Initialization
+You can initialize `Dlog` in your `Application` class or any entry point of your app:
+
 ```kotlin
 Dlog.init(
     defaultTag = "MyAppTag",  // Default tag for all logs
@@ -43,3 +36,53 @@ Dlog.init(
     logFileName = "app_logs.txt"  // File name for log persistence (optional)
 )
 ```
+
+### Explanation of Parameters
+- **`defaultTag`**: The default tag used in all log messages.
+- **`isLoggingEnabled`**: Controls whether logging is active:
+  - `true`: Enables logging.
+  - `false`: Disables logging (e.g., in Release mode).
+- **`logFileName`**: (Optional) Specifies the file to save logs for debugging purposes.
+
+---
+
+### Basic Logging
+Once initialized, you can use the following logging methods:
+
+```kotlin
+Dlog.d("This is a debug message")    // Debug log
+Dlog.i("This is an info message")    // Info log
+Dlog.w("This is a warning")          // Warning log
+Dlog.e("This is an error message")   // Error log
+```
+
+---
+
+
+## 🛠 Configuration Example
+
+Here’s how you might configure `Dlog` in your `Application` class:
+
+```kotlin
+class MyApp : Application() {
+    override fun onCreate() {
+        super.onCreate()
+        Dlog.init(
+            defaultTag = "MyAppTag",
+            isLoggingEnabled = BuildConfig.DEBUG,  // Automatically enable or disable logging
+            logFileName = "app_logs.txt"  // Save logs in Debug mode
+        )
+    }
+}
+```
+
+
+---
+
+## 🛡️ Log in Release Builds
+
+For release builds, ensure logging is automatically disabled:
+- **Debug Mode**: Logs are enabled for thorough testing.
+- **Release Mode**: Logs are suppressed for performance and security by setting `isLoggingEnabled` to `false`.
+
+---

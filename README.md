@@ -35,3 +35,11 @@ Dlog.i("This is an info message")
 Dlog.w("This is a warning")
 Dlog.e("This is an error message")
 ```
+### Initialization
+```You can initialize Dlog in your Application class or any entry point of your app:
+Dlog.init(
+    defaultTag = "MyAppTag",  // Default tag for all logs
+    isLoggingEnabled = BuildConfig.DEBUG,  // Enable or disable logging dynamically
+    logFileName = "app_logs.txt"  // File name for log persistence (optional)
+)
+```

@@ -36,7 +36,7 @@ Dlog.w("This is a warning")
 Dlog.e("This is an error message")
 ```
 ### Initialization
-```You can initialize Dlog in your Application class or any entry point of your app:
+```kotlin
 Dlog.init(
     defaultTag = "MyAppTag",  // Default tag for all logs
     isLoggingEnabled = BuildConfig.DEBUG,  // Enable or disable logging dynamically

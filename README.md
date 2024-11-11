@@ -25,3 +25,13 @@ An easy-to-use and powerful logging library for Android applications. Simplify y
    ```
 
 2. **Sync the project**.
+
+## 📖 Usage
+
+### Basic Logging
+```kotlin
+LogLibrary.d("This is a debug message")
+LogLibrary.i("This is an info message")
+LogLibrary.w("This is a warning")
+LogLibrary.e("This is an error message")
+```

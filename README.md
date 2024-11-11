@@ -20,7 +20,7 @@ An easy-to-use and powerful logging library for Android applications. Simplify y
 1. **Add the dependency** to your `build.gradle` file:
    ```gradle
    dependencies {
-       implementation 'com.yourdomain:loglibrary:1.0.0'
+       implementation 'com.chani01:LogCatX:1.0.0'
    }
    ```
 
@@ -30,8 +30,8 @@ An easy-to-use and powerful logging library for Android applications. Simplify y
 
 ### Basic Logging
 ```kotlin
-LogLibrary.d("This is a debug message")
-LogLibrary.i("This is an info message")
-LogLibrary.w("This is a warning")
-LogLibrary.e("This is an error message")
+Dlog.d("This is a debug message")
+Dlog.i("This is an info message")
+Dlog.w("This is a warning")
+Dlog.e("This is an error message")
 ```

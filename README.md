@@ -15,10 +15,12 @@ An easy-to-use and powerful logging library for Android applications. Simplify y
 
 ## 🚀 Installation
 
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/chani01/LogCatX?label=Latest%20Version)](https://github.com/chani01/LogCatX/releases)
+
 1. **Add the dependency** to your `build.gradle` file:
    ```gradle
    dependencies {
-       implementation 'com.chani01:LogCatX:1.0.4'
+       implementation 'com.chani01:LogCatX:<latest_version>'
    }
    ```
 

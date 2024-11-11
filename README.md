@@ -24,6 +24,8 @@ An easy-to-use and powerful logging library for Android applications. Simplify y
 
 2. **Sync the project**.
 
+---
+
 ## 📖 Usage
 
 ### Initialization

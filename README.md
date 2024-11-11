@@ -30,7 +30,7 @@ An easy-to-use and powerful logging library for Android applications. Simplify y
 
 ### Basic Logging
 ```kotlin
-Dlog.d("This is a debug message")
+Dlog.d("This is a debug message")
 Dlog.i("This is an info message")
 Dlog.w("This is a warning")
 Dlog.e("This is an error message")

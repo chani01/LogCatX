@@ -7,7 +7,7 @@ An easy-to-use and powerful logging library for Android applications. Simplify y
 ## 🌟 Features
 - **Simple API**: Minimal setup with intuitive method calls.
 - **Customizable Tags**: Easily set default tags for better log organization.
-- **Log Levels**: Supports various log levels (DEBUG, INFO, WARN, ERROR, TRACE).
+- **Log Levels**: Supports various log levels (`DEBUG`, `INFO`, `WARN`, `ERROR`, `TRACE`).
 - **File Logging**: Optionally persist logs to a file for debugging.
 - **Flexible Logging Control**: Enable or disable logging dynamically using `isLoggingEnabled`.
 

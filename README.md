@@ -58,6 +58,7 @@ Dlog.d("This is a debug message")    // Debug log
 Dlog.i("This is an info message")    // Info log
 Dlog.w("This is a warning")          // Warning log
 Dlog.e("This is an error message")   // Error log
+Dlog.t("This is a trace log")        // Trace log
 ```
 
 ---

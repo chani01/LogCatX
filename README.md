@@ -48,8 +48,6 @@ Dlog.init(
   - `false`: Disables logging (e.g., in Release mode).
 - **`logFileName`**: (Optional) Specifies the file to save logs for debugging purposes.
 
----
-
 ### Basic Logging
 Once initialized, you can use the following logging methods:
 
@@ -79,7 +77,6 @@ class MyApp : Application() {
     }
 }
 ```
-
 
 ---
 

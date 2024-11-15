@@ -1,4 +1,4 @@
-# 📘 Android Log Library
+# Android Log Library
 
 An easy-to-use and powerful logging library for Android applications. Simplify your debugging process with customizable and efficient logging features.
 
@@ -48,8 +48,10 @@ Dlog.init(
   - `false`: Disables logging (e.g., in Release mode).
 - **`logFileName`**: (Optional) Specifies the file to save logs for debugging purposes.
 
+---
+
 ### Basic Logging
-Once initialized, you can use the following logging methods:
+After initialization, use the following methods for logging:
 
 ```kotlin
 Dlog.d("This is a debug message")    // Debug log
@@ -82,7 +84,8 @@ class MyApp : Application() {
 
 ## 🛡️ Log in Release Builds
 
-For release builds, ensure logging is automatically disabled:
+For release builds, ensure logging is automatically disabled for performance and security:
+
 - **Debug Mode**: Logs are enabled for thorough testing.
 - **Release Mode**: Logs are suppressed for performance and security by setting `isLoggingEnabled` to `false`.
 

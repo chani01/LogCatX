@@ -20,7 +20,7 @@ An easy-to-use and powerful logging library for Android applications. Simplify y
 1. **Add the dependency** to your `build.gradle` file:
    ```gradle
    dependencies {
-       implementation 'com.chani01:LogCatX:<latest_version>'
+       implementation 'com.github.chani01:LogCatX:<latest_version>'
    }
    ```
 
